@@ -10,9 +10,12 @@ namespace ChallengesWithTestsMark8
         public bool CharacterIsALetter(char c)
         {
 
-            //return (char >= 'a' && c <= 'z') || (char >= 'A' && c <= 'Z');
+            
+               return (c >= 'a' && c <= 'z') ||
+               (c >= 'A' && c <= 'Z');
+            
 
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         public bool CountOfElementsIsEven(string[] vals)
@@ -76,19 +79,23 @@ namespace ChallengesWithTestsMark8
 
         public int SumEvens(int[] numbers)
         {
-            //var z = 0;
-            //foreach (int x in numbers)
-            //{
-               // if (x % 2 == 0)
-                //{
-                  //  return z += x;
+            if (numbers == null)
+            {
+                return 0;
+            }
+            int sumEvens = 0;
 
-                //}
-            //}
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] % 2 == 0)
+                {
+                    sumEvens += numbers[i];
+                }
+            }
+            return sumEvens;
 
+            //throw new NotImplementedException();
 
-
-            throw new NotImplementedException();
         }
 
         public bool IsSumOdd(List<int> numbers)
